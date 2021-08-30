@@ -9,7 +9,7 @@
 	<header class="container">
 		<nav class="navbar navbar-dark bg-dark navbar-expand-md">
 			<h1 class="navbar-brand">Welcome to Dutch Treat</h1>
-			<button class="navbar-toggler" data-toggle="collapse" data-target="#theMenu">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theMenu">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div id="theMenu" class="navbar-collapse collapse">
@@ -28,7 +28,7 @@
 		</nav>
 	</header>
 	<section class="container">
-		<h1>@ViewBag.Title</h1>
+		<h1 class="text-center">@ViewBag.Title</h1>
 		@RenderBody()
 	</section>
 	<footer class="text-center">Copyright 2021 Dutch Treat LLC</footer>
