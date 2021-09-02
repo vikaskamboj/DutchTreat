@@ -8,7 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DutchTreat.Services;
-
+using DutchTreat.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace DutchTreat
 {
@@ -18,8 +19,9 @@ namespace DutchTreat
 		// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddTransient<IMailService, NullMailService>();
+			services.AddDbContext<DutchContext>();
 
+			services.AddTransient<IMailService, NullMailService>();
 			services.AddControllersWithViews();
 			services.AddRazorPages();
 		}
